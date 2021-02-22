@@ -279,8 +279,6 @@ client.on('guildMemberAdd', async member => {
 			}
 		}
 	});
-	//prettify your phucking code it looks so dam ugly ew :vomiting:
-	//prettify'd bababoey
 });
 
 client.login(token).catch(err => {
