@@ -1,6 +1,7 @@
 module.exports = {
   name: "config",
   run: async (client, message, args, db) => {
+if (!message.channel.permissionsFor(message.author).has("MANAGE_GUILD")) return message.channel.send(":x: | **You dont have permissions to use this Command!**");
     let config = args[0]
     if (!config) return message.channel.send(":x: | **Provide Your Option**")
     if (!["channel", "role", "logs", "autokick"].includes(config)) return message.channel.send(":x: | **The only options are channel, role, logs & autokick**")
